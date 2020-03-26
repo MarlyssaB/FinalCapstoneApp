@@ -1,0 +1,39 @@
+<div>
+    <header class="Header">
+      <app-logo ></app-logo>
+      <!-- <Navigation>   --> 
+      <div id="navigation" class="Navigation">
+        <nav>
+          <nav>
+            <a class="btn btn-info" routerLink="" routerLinkActive="active">Login/Signup </a>
+            <a class="btn btn-info" routerLink="/main" routerLinkActive="active">Home Page</a>
+        </nav>
+          <ul>
+            <li>Browse</li>
+            <li>My list</li>
+            <li>Top picks</li>
+            <li>Recent</li>
+          </ul>
+        </nav>
+      </div>
+      <!--  </Navigation>   --> 
+      <app-search-box ></app-search-box>
+      <!--  <UserProfile>  -->
+      <div class="UserProfile">
+        <div class="User">
+          <div class="name">Jack Harkness</div>
+          <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Creative-Tail-Animal-dog.svg" alt="profile-picture" />
+          </div>
+        </div>
+      </div>
+      <!--*  </UserProfile>   -->
+    </header>
+    <app-hero></app-hero>
+    <app-title-list 
+      title="Search Results" 
+      [movies]="searchResults" ></app-title-list>  
+    <app-title-list 
+      title="My Movies" 
+      [movies]="myMovieList"></app-title-list>  
+  </div>
