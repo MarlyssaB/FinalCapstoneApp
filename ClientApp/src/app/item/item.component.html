@@ -1,0 +1,8 @@
+<div class="Item" [ngStyle]="theStyles">
+    <div class="overlay">
+      <div class="title">{{name}}</div>
+      <div class="rating">{{movie.vote_average}}</div>
+      <div class="plot">{{movie.overview}}</div>
+      <app-list-add [movie]="movie"></app-list-add>
+    </div>
+  </div>

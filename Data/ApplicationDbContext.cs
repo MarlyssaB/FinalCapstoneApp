@@ -1,5 +1,6 @@
 ﻿using AutoMapper.Configuration;
 using capstone.Models;
+using FinalCapstoneApp.Models;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,8 @@ namespace capstone.Data
         public IConfiguration Configuration { get; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Movie> Movies {get; set;}
+        
         public ApplicationDbContext(
             DbContextOptions options,
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
