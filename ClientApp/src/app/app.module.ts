@@ -17,6 +17,9 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { MovieComponent } from './movie/movie.component';
 import { MovieMainComponent } from './movie-main/movie-main.component';
 import { ListAddComponent } from './list-add/list-add.component';
+import { ApiService } from './services/api.service';
+import { MovieService } from './services/movie.service';
+import { MovieApiService } from './services/movie-api.service';
 
 
 @NgModule({
@@ -48,8 +51,8 @@ import { ListAddComponent } from './list-add/list-add.component';
 
     ])
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
+  providers: [ MovieService, MovieApiService, ApiService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
